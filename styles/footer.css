@@ -1,0 +1,12 @@
+.footer-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-icons a {
+    display: block;
+    border: 1px solid black;
+    overflow: hidden;
+    height: 2rem;
+    width: 2rem;
+}
