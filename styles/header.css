@@ -1,15 +1,21 @@
+@import url('main.css');
+
 #header {
-    border: 1px solid black;
     padding: 1.5rem 3rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: var(--forest-green);
 }
 
 ul {
     display: flex;
     gap: 2rem;
+}
+
+ul li a{
+    color: var(--cream-white);
 }
 
 .bar-container {

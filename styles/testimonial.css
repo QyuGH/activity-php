@@ -1,0 +1,51 @@
+@import url('main.css');
+
+#testimonials{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonial-card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-auto-rows: auto; /* rows adjust based on content */
+    gap: 2rem; /* spacing between cards */
+    padding: 2rem 0;
+}
+
+.testimonial-card {
+    display: flex;
+    flex-direction: row; /* horizontal layout inside card */
+    align-items: flex-start;
+    gap: 1rem; /* spacing between image and text */
+    padding: 1rem;
+    background-color: var(--cream-white); /* optional background for contrast */
+    border-radius: 0.5rem; /* rounded corners */
+    min-height: 150px; /* rectangular feel */
+}
+
+.user-img img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-review {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.user-name {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+.review-txt {
+    font-size: 0.9rem;
+    line-height: 1.3;
+    color: #333;
+}

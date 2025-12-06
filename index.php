@@ -9,9 +9,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Forest Bean</title>
-        <link href="styles/main.css" rel="stylesheet">
-        <link href="styles/header.css" rel="stylesheet">
-        <link href="styles/footer.css" rel="stylesheet">
+        <link href="styles/styles.css" rel="stylesheet">
     </head>
     <body>
         <?php require_once 'header.php'; ?>

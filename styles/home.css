@@ -1,0 +1,97 @@
+@import url("main.css");
+
+/* Hero Section */
+.hero {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  height: 32rem;
+  background: url("../images/gallery/hero2-min.webp") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  overflow: hidden;
+}
+
+/* Overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--forest-green); /* your dark green */
+  opacity: 0.4; /* adjust darkness */
+  z-index: 1;
+}
+
+/* Bring text above overlay */
+.hero-text {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.hero-text h1,
+.hero-text p,
+.hero-text button {
+  color: var(--cream-white);
+}
+
+/* Featured Products Section */
+.featured-products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  background-color: var(--dark-brown);
+}
+
+.feature-card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.featured-card {
+  width: 28rem;
+  height: 28rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.feature-img {
+  width: 20rem;
+  height: 20rem;
+}
+
+/* Visit Us Section */
+.visit-us {
+    position: relative;
+  background: url("../images/gallery/footer.webp") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 0;
+  gap: 1rem;
+}
+
+.visit-us::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--dark-brown);
+  opacity: 0.2; 
+  z-index: 1;
+}
+
+.visit-us h1,
+.visit-us p,
+.visit-us button {
+  color: var(--cream-white);
+}

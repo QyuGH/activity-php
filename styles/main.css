@@ -1,9 +1,10 @@
-::root {
+:root {
     --light-green: #606c38;
     --forest-green: #283618;
     --cream-white: #fefae0;
     --light-brown: #bc6c25;
     --dark-brown: #3a1d1f;
+    --light-black: #1b1b1b;
 }
 
 * {
@@ -25,7 +26,6 @@ body {
 main {
     width: 100%;
     max-width: 100rem;
-    border: 1px solid black;
 }
 
 img {

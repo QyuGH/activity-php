@@ -1,12 +1,34 @@
-.footer-icons {
+@import url('main.css');
+
+#footer {
+    background-color: var(--light-black);
+    text-align: center;
+    padding: 2rem 0;
+    width: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 1rem;
 }
 
-.footer-icons a {
-    display: block;
-    border: 1px solid black;
-    overflow: hidden;
-    height: 2rem;
+#footer p, 
+#footer h1 {
+    color: var(--cream-white);
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.social-icons {
     width: 2rem;
+    height: 2rem;
+    padding: 4px;
+    border-radius: .25rem;
+    overflow: hidden;
+    border: 1px solid var(--cream-white);
 }
