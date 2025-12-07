@@ -1,35 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Outfit:wght@100..900&display=swap");
+
 :root {
-    --light-green: #606c38;
-    --forest-green: #283618;
-    --cream-white: #fefae0;
-    --light-brown: #bc6c25;
-    --dark-brown: #3a1d1f;
-    --light-black: #1b1b1b;
+  --light-green: #606c38;
+  --forest-green: #283618;
+  --cream-white: #fefae0;
+  --light-brown: #bc6c25;
+  --dark-brown: #3a1d1f;
+  --light-black: #1b1b1b;
+
+  --main-font: "Crimson Text", serif;
+  --secondary-font: "Outfit", sans-serif;
 }
 
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    list-style: none;
-    color: black;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  color: black;
+  font-family: var(--main-font);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cream-white);
 }
 
 main {
-    width: 100%;
-    max-width: 100rem;
+  width: 100%;
+  max-width: 100rem;
+  margin-top: 5.5rem;
 }
 
 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+p {
+  font-family: var(--secondary-font);
+}
+
+.page-heading {
+  color: var(--forest-green);
 }

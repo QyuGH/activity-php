@@ -1,43 +1,108 @@
-@import url('main.css');
+@import url("main.css");
 
+/* HEADER */
 #header {
-    padding: 1.5rem 3rem;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--forest-green);
+  padding: 1.5rem 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--forest-green);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
 }
 
+.logo {
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo h1 {
+  color: var(--cream-white);
+  font-size: 2.5rem;
+}
+
+.bean-logo {
+  width: 3rem;
+  height: 3rem;
+  overflow: hidden;
+}
+
+/* NAV MENU */
 ul {
-    display: flex;
-    gap: 2rem;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
 }
 
-ul li a{
-    color: var(--cream-white);
+/* LINKS */
+ul li a {
+  color: var(--cream-white);
+  text-decoration: none;
 }
 
 .bar-container {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
 }
 
 .bar {
-    height: 4px;
-    width: 28px;
-    background-color: black;
-    border-radius: 4px;
+  height: 4px;
+  width: 28px;
+  background-color: black;
+  border-radius: 4px;
 }
 
+/* MOBILE MENU */
 @media (max-width: 760px) {
-    ul {
-        display: none;
-    }
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--forest-green);
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease-in-out;
+    gap: 0;
+  }
 
-    .bar-container {
-        display: flex;
-    }
+  li {
+    text-align: center;
+    width: 100%;
+  }
+
+  li a {
+    width: 100%;
+    display: block;
+    padding: 0.75rem;
+  }
+
+  li a:hover {
+    background-color: var(--dark-brown);
+  }
+
+  ul.active {
+    max-height: 400px; 
+  }
+
+  .bar-container {
+    display: flex;
+  }
+
+  .logo h1 {
+    font-size: 1.5rem;
+  }
 }

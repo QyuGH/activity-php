@@ -1,97 +1,235 @@
 @import url("main.css");
 
-/* Hero Section */
+/* HERO SECTION */
 .hero {
-  position: relative;
-  aspect-ratio: 16 / 9;
-  width: 100%;
-  height: 32rem;
-  background: url("../images/gallery/hero2-min.webp") center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4rem;
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 32rem;
+    aspect-ratio: 16 / 9;
+    padding: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("../images/gallery/hero2-min.webp") center/cover no-repeat;
+    overflow: hidden;
 }
 
-/* Overlay */
 .hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--forest-green); /* your dark green */
-  opacity: 0.4; /* adjust darkness */
-  z-index: 1;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--forest-green);
+    opacity: 0.5;
+    z-index: 1;
 }
 
-/* Bring text above overlay */
 .hero-text {
-  position: relative;
-  z-index: 2;
-  text-align: center;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease-out;
+}
+
+.hero-text.animate {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .hero-text h1,
 .hero-text p,
 .hero-text button {
-  color: var(--cream-white);
+    color: var(--cream-white);
 }
 
-/* Featured Products Section */
+.brand-text {
+    font-size: 6rem;
+    line-height: 1;
+}
+
+.tagline {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.view-btn {
+    background-color: transparent;
+    padding: 0.5rem 2.75rem;
+    border: 1.5px solid #fff;
+    transition: all 0.5s ease;
+}
+
+.view-btn:hover {
+    background-color: var(--cream-white);
+    color: var(--dark-brown);
+}
+
+/* FEATURED PRODUCTS SECTION */
 .featured-products {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem 0;
-  background-color: var(--dark-brown);
+    width: 100%;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
 }
 
 .feature-card-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
 }
 
 .featured-card {
-  width: 28rem;
-  height: 28rem;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
+    width: 18rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    opacity: 0;
+    transform: scale(0.8) translateY(0);
+    transition: all 0.6s ease-out;
+}
+
+.featured-card.animate {
+    opacity: 1;
+    transform: scale(1) translateY(0);
 }
 
 .feature-img {
-  width: 20rem;
-  height: 20rem;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 0.5rem;
 }
 
-/* Visit Us Section */
+.feature-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.feature-img img:hover {
+    transform: scale(1.05);
+}
+
+.featured-card p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* VISIT US SECTION */
 .visit-us {
     position: relative;
-  background: url("../images/gallery/footer.webp") center/cover no-repeat;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 4rem 0;
-  gap: 1rem;
+    width: 100%;
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background: url("../images/gallery/footer.webp") center/cover no-repeat;
+    text-align: center;
 }
 
 .visit-us::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--dark-brown);
-  opacity: 0.2; 
-  z-index: 1;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--dark-brown);
+    opacity: 0.2;
+    z-index: 1;
 }
 
 .visit-us h1,
 .visit-us p,
 .visit-us button {
-  color: var(--cream-white);
+    color: var(--cream-white);
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease-out;
+}
+
+.visit-us.animate h1,
+.visit-us.animate p,
+.visit-us.animate button {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.visit-us h1 {
+    font-size: 4rem;
+    line-height: 0.75;
+}
+
+.visit-us p {
+    font-size: 1rem;
+}
+
+.find-btn {
+    background-color: transparent;
+    padding: 0.5rem 2.75rem;
+    border: 1.5px solid #fff;
+    transition: all 0.5s ease;
+}
+
+.find-btn:hover {
+    background-color: var(--cream-white);
+    color: var(--dark-brown);
+}
+
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .featured-card {
+        width: 14rem;
+    }
+
+    .featured-card p {
+        font-size: 1rem;
+    }
+
+    .brand-text {
+        font-size: 4.5rem;
+    }
+
+    .tagline {
+        font-size: 1.5rem;
+    }
+
+    .visit-us h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .feature-card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .featured-card {
+        width: 90%;
+        max-width: 18rem;
+    }
+
+    .brand-text {
+        font-size: 3rem;
+    }
+
+    .tagline {
+        font-size: 1.25rem;
+    }
+
+    .visit-us h1 {
+        font-size: 2.25rem;
+    }
 }

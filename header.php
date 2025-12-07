@@ -1,7 +1,10 @@
 <section id="header">
-    <div class="logo">
-        <h1>Forest Bean</h1>
-    </div>
+    <a href="#" class="logo">
+        <div class="bean-logo">
+            <img src="images/socials/logo.webp" alt="Bean Logo" loading="lazy">
+        </div>
+        <h1>Forest Bean Co.</h1>
+    </a>
     <div class="nav-container">
         <ul>
             <li><a href="index.php">Home</a></li>

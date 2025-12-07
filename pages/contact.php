@@ -1,9 +1,4 @@
 <section id="contact">
-    <div class="contact-banner">
-        <p>Let's Connect!</p>
-        <h1>Contact Us</h1>
-    </div>
-
     <div class="contact-message">
         <h1>Here at Forest Bean, our customers are valued.</h1>
         <p>
@@ -13,7 +8,7 @@
         </p>
     </div>
 
-    <h1>Send us your message</h1>
+    <h1 class="form-title">Send us your message</h1>
 
     <div class="message-form-container">
         <form action="" method="post" class="message-form">
@@ -26,10 +21,11 @@
             <label for="message">Message:</label>
             <textarea id="message" name="message" rows="5" required></textarea>
 
-            <button type="submit">Send Message</button>
+            <button type="submit" class="send-btn">Send Message</button>
         </form>
+
         <div class="contact-img-container">
-            <img src="" alt="">
+            <img src="images/gallery/footer.webp" alt="Contact" loading="lazy">
         </div>
     </div>
 </section>
